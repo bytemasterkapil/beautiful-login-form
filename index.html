@@ -1,0 +1,92 @@
+<!-- 
+    Document   : index
+    Created on : 2024-06-18 22:26:48
+    Author     : Kapil Arya
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page </title>
+    <meta name="description" content="Login Page">
+    <meta name="keywords" content="login form,login page,beautifull login page">
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+    <!-- ===== BOX ICONS ===== -->
+`   <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    
+
+
+</head>
+<body>
+    <script>
+        function validate(){
+            var userid=document.getElementById("userid");
+            var password=document.getElementById("password");
+            var usertype=document.getElementById("usertype");
+            if(userid.value=="" || userid.value=="null"){
+                alert('Please Enter Your UserId');
+                userid.focus();
+                
+            }
+            else if(password.value==""||password.value=="null")
+            {
+                alert('Please Enter Your Password');
+                password.focus();
+            }
+            else{
+                document.getElementById("login-in").submit();
+            }
+        }
+    </script>
+    
+    
+    <div class="login">
+        <div class="login__content">
+            <div class="login__img">
+                <img src="images/img-login.svg" alt="">
+            </div>
+
+            <div class="login__forms">
+                <form action="" class="login__registre" id="login-in" onsubmit="event.preventDefault();validate();">
+                    <h1 class="login__title">
+                        <img src="images/header.jpg">
+                    </h1>
+                    <div class="login__box">
+                        <i class='bx bx-user login__icon'></i>
+                        <select>
+                            <option selected>Student</option>
+                            <option>Teacher</option>
+                            <option>Admin</option>
+
+                        </select>
+                    </div>
+
+
+                    <div class="login__box">
+                        <i class='bx bx-user login__icon'></i>
+                        <input type="text" placeholder="Username" class="login__input" id="userid" name="userid">
+                    </div>
+
+                    <div class="login__box">
+                        <i class='bx bx-lock-alt login__icon'></i>
+                        <input type="password" placeholder="Password" class="login__input" id="password" name="password">
+                    </div>
+
+                    <button type="submit" class="login__button" style="border: none;width: 100%">Sign In</button>
+
+                </form>
+                
+
+            </div>
+        </div>
+    </div>
+
+    
+    
+
+    <script src="js/bootstrap.bundle.js"></script>
+</body>
+</html>
